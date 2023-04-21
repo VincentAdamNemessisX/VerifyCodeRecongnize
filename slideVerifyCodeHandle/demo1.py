@@ -46,7 +46,7 @@ class CrackGeetest:
         获取验证码位置
         :return:
         """
-        img = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'yidun_bg-img')))
+        # img = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'yidun_bg-img')))
         img = self.browser.find_element(By.CLASS_NAME, 'yidun_bg-img')
         location = img.location
         size = img.size
@@ -177,10 +177,7 @@ if __name__ == '__main__':
     browser.find_element(By.ID, 'lPassword').send_keys('ZTXic3344')
     browser.find_element(By.CLASS_NAME, 'wall-sub-btn').click()
     image = browser.find_element(By.CLASS_NAME, 'yidun_bg-img')
-    print(image.get_attribute('src'))
     # browser.close()
-
-
 
     # crack = CrackGeetest()
     # crack.browser.get(crack.url)
